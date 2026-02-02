@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { AuthProvider, useAuth } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import RegistrationForm from './components/RegistrationForm';
+import OTPVerification from './components/OTPVerification';
 import Dashboard from './pages/Dashboard';
 import './index.css';
 
@@ -35,6 +36,14 @@ function AppRoutes() {
                     element={
                         <PublicRoute>
                             <RegistrationForm />
+                        </PublicRoute>
+                    }
+                />
+                <Route
+                    path="/verify-otp"
+                    element={
+                        <PublicRoute>
+                            <OTPVerification />
                         </PublicRoute>
                     }
                 />
